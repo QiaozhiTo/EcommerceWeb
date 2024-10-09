@@ -1,0 +1,42 @@
+.logo{
+    width: 150px;
+    height: 100px;
+}
+
+.NaviBar{
+    width: 134px;
+    height: 65px;
+    padding:30px 50px 5px 50px;
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+
+}
+.mainMenu{
+    width: 499px;
+    height: 18.398px;
+    margin: 16px 0 16px 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.mainMenu ul{
+    list-style: none;
+    display: flex;
+    /* justify-content: space-between; */
+}
+.naviName{
+    padding: 10px 15px 10px 15px;
+    height: auto;
+    width: auto;
+    font-size: 14px;
+
+}
+
+
+.cart{
+    width: 20px;
+    height: 20px;
+    background-color: aqua;
+}
