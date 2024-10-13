@@ -57,13 +57,28 @@ export default function ProductDetails() {
                         </div>
                         <h1>{filterProduct.name}</h1>
                         <div className="desc">{filterProduct.desc}</div>
-                        <br></br>
-                        <div>
+                        
+                        <div className="optionTruck">
                             <div className="lensOption">Lens Width and Frame Size</div>
+                            <select className="widthOpt">
+                                <option value="28 mm">{filterProduct.size[0]} mm</option>
+                                <option value="36 mm">{filterProduct.size[1]} mm</option>
+                                <option value="42 mm">{filterProduct.size[2]} mm</option>
 
+                            </select>
                         </div>
                         <div className="colorArea">
                             <div className="colorOption">Choose Color</div>
+                            
+                                {/* {filterProduct.map((item, index)=>{
+                                    return(
+                                        <div className="colorList">
+                                            <div style={{backgroundColor:item.color[index]}}> </div>
+                                        </div>
+
+                                    )
+                                })}
+                             */}
                             <ur className='colorList'>
                                 <li style={{backgroundColor:filterProduct.color[0]}}></li>
                                 <li style={{backgroundColor:filterProduct.color[1]}}></li>
@@ -79,14 +94,12 @@ export default function ProductDetails() {
                         <h1 className="price">${filterProduct.price}.00</h1>
                         
                         <div className="modelAction">
-                            <button onClick={()=>{
+                            <button className="button-model" onClick={()=>{
                                 handleAddToCart(filterProduct.parameter)
                             }}>Add to Basket</button>
 
-
-
-
                         </div>
+                        
                     </div>
                 </div>
 

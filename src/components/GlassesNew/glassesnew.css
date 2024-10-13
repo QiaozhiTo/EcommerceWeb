@@ -13,7 +13,7 @@
     display: grid;
     /* flex-wrap: wrap; */
     grid-template-columns: repeat(7, 1fr);
-    border: 1px solid lightgray;
+    /* border: 1px solid lightgray; */
 
 
 }

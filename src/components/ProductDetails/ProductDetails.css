@@ -1,3 +1,7 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
 .mainContent{
     width: 1240px;
     height: 1405px;
@@ -87,10 +91,29 @@
     width: 436px;
     height: 39.797px;
     margin-top: 16px;
-    /* background-color: aquamarine; */
     display: flex;
     justify-content: left;
 
+}
+.button-model{
+    width: 69px !important;
+    height: 13.797px !important;
+    padding-top: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    font-family: Tajawal, Helvetica, Arial, sans-serif;
+}
+.optionTruck{
+    width: 439px;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 38.59px;
 }
 .lensOption{
     text-align: left;
@@ -99,9 +122,17 @@
 
 
 }
+.widthOpt{
+    width: 434px;
+    height: 34.9px;
+    border: 1px solid rgb(204, 204, 204);
+}
 .colorArea{
     width: 436px;
     height: 81.2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 

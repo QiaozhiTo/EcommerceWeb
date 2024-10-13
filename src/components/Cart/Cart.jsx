@@ -14,6 +14,7 @@ export default function Cart() {
         return(
           <div className='price1'>
             <h1>{item.price}</h1>
+            <span>{item.size}</span>
             {/* <img>{item.img}</img> */}
           </div>
           )
