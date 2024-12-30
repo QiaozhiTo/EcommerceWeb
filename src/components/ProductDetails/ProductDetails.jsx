@@ -12,6 +12,9 @@ export default function ProductDetails() {
     console.log(params);
     let filterProduct = getData(params.productId)
     console.log(filterProduct);
+    // filterProduct.size.map((item,index)=>{
+        // return()
+    // })
     
     // console.log(dispatch);
     let navigate = useNavigate()
@@ -61,9 +64,10 @@ export default function ProductDetails() {
                         <div className="optionTruck">
                             <div className="lensOption">Lens Width and Frame Size</div>
                             <select className="widthOpt">
-                                <option value="28 mm">{filterProduct.size[0]} mm</option>
-                                <option value="36 mm">{filterProduct.size[1]} mm</option>
-                                <option value="42 mm">{filterProduct.size[2]} mm</option>
+                                <option value ="">-- Select Size --</option>
+                                <option value="">{filterProduct.size[0]} mm</option>
+                                <option value="">{filterProduct.size[1]} mm</option>
+                                <option value="">{filterProduct.size[2]} mm</option>
 
                             </select>
                         </div>

@@ -96,8 +96,8 @@
 
 }
 .button-model{
-    width: 69px !important;
-    height: 13.797px !important;
+    width: 103px !important;
+    height: 39.8px !important;
     padding-top: 12px;
     padding-left: 16px;
     padding-right: 16px;
@@ -106,6 +106,7 @@
     background-color: black;
     color: white;
     font-family: Tajawal, Helvetica, Arial, sans-serif;
+    font-size: 10px;
 }
 .optionTruck{
     width: 439px;
@@ -126,6 +127,8 @@
     width: 434px;
     height: 34.9px;
     border: 1px solid rgb(204, 204, 204);
+    color: #808080;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .colorArea{
     width: 436px;
