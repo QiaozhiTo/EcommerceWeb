@@ -84,6 +84,8 @@ body {
 
     font-size: 11px;
   }
+  /* Cart Items */
+  
   .basket-item{
     width: 566px;
     height: 90px;
@@ -101,10 +103,7 @@ body {
     padding: 5px 5px 5px 5px ;
     border: 1px solid rgb(225, 225, 225);
     background: none;
-
-    
 }
-
 
 .decrease-button{
     background: none;
@@ -126,12 +125,63 @@ body {
     width: 90px;
     height: 90px;
 }
+
+.basket-item-details{
+    width: 292px;
+    height: 76.469px;
+    background-color: lightblue;
+    line-height: 90px;
+    margin: auto;
+}
+
+.basket-item-specs{
+    /* width: 292px; */
+    /* height: 34.07px; */
+    background-color: lightpink;
+    margin-top: 0px;
+}
+.basket-item-specs h4{
+    width: 142px;
+    height: 18.4px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: rgb(26,26,26);
+    text-align: left;
+    line-height: 34px;
+    font-family: Tajawal, Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: lavender;
+}
+
+.basket-item-specs-2{
+    width: 292px;
+    height: 34.07px;
+    background-color: green;
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    font-family: Tajawal, Helvetica, Arial, sans-serif;
+
+}
+.detail-quantity{
+    width: 97.328px;
+    height: 34.07px;
+    font-size: 12px;
+
+}
+
+
 .basket-item-price{
     font-family: Tajawal, Helvetica, Arial, sans-serif;
     width: 60px;
     height: 18.398px;
     line-height: 90px;
     text-align: center;
+    font-size: 16px;
+    color: #1a1a1a;
 }
 
 
@@ -145,17 +195,7 @@ body {
     cursor: pointer;
   }
    */
-  /* Cart Items */
-  .cart-items {
-    flex: 1;
-    padding: 15px;
-    overflow-y: auto;
-  }
   
-  .cart-items p {
-    text-align: center;
-    color: #555;
-  }
   
   /* Cart Footer */
   .cart-footer {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import "./cartnew.css";
+import { Link } from "react-router-dom";
 
 const CartNew = () => {
   let products = useSelector((state)=>state.cartItems)
@@ -31,45 +32,59 @@ const CartNew = () => {
             </button> */}
             </div>
 
-            <div className="basket-item">
-                <div className="item-control">
-                    <button className="increase-button" type="button">
-                    </button>
-                    <button className="decrease-button" type ="button"></button>
+            {products.map((item)=> {
+                return(
 
-                </div>
-           
-                {products.map((item) => {
-                    return (
-                    <div className="item-wrapper">
+                    <div className="basket-item">
 
-                            <img className="basket-item-img" src={item.img} alt=""></img>
-                            <div className="basket-item-details"></div>
-                            <h4 className="basket-item-price">${item.price}</h4>
-                            <div className="basket-item-remover"></div>
+                    <div className="item-control">
+                        <button className="increase-button" type="button">
+                        </button>
+                        <button className="decrease-button" type ="button"></button>
+    
                     </div>
-                
-                    )
-                })}
+               
+                    
+                        <div className="item-wrapper">
+    
+                                <img className="basket-item-img" src={item.img} alt=""></img>
+                                <div className="basket-item-details">
+                                    <div className="basket-item-specs">
+                                        <Link to = {`/product/${item.parameter}`}>
+                                            <h4>{item.name}</h4>
+                                        </Link>
+                                    </div>
+                                    <div className="basket-item-specs-2">
+                                    <div className="detail-quantity">
+                                        <span className="spec-title">Quantity</span>
+                                        <h5>{item.quantity}</h5>
+                                    </div>
+
+                                    <div className="detail-size">
+                                        <span className="spec-title">Size</span>
+                                        <h5>{item.size}</h5>
+                                    </div>
+                                    <div className="detail-color">
+                                        <span className="spec-title">Color</span>
+                                        <h5>{item.color}</h5>
+                                    </div>
+
+                                    </div>
+
+                                </div>
+                                <h4 className="basket-item-price">${item.price}</h4>
+                                <div className="basket-item-remover"></div>
+                        </div>
+                    
                    
-            </div>
-
-            <div className="cart-items">
-            <p>No items in your cart.</p>
-            {/* Add cart items dynamically here */}
-
-
-            {products.map((item) => {
-                return (
-                    <div className="items">
-                        <h1>{item.price}</h1>
-
                     </div>
+
 
                 )
-                
+
             })}
-            </div>
+             
+          
             <div className="cart-footer">
             <button className="checkout-button">Checkout</button>
             </div>
