@@ -13,15 +13,21 @@ export default function GlassesNew() {
         <div className="glass">
             {data.map((item,index)=>{
                 return(
+                    
                     <Link to ={`/product/${item.parameter}`}>
+                   {/* 02/22/2025 -- Add a static class to ensure all items share base styles */}
 
-                    <div className={item.brand} key={index}>
+                    <div className={`productItem ${item.brand}`} key={index}>
 
-                        <img className = "glassImage" src={item.img} alt=" "/>
-                        <div className='name'>{item.name}</div>
-                        <div className = 'glass-brand'>{item.brand}</div>
-                        <div className='price'>{item.price}</div>
+                        <div className="img-wrapper">
+                            <img className = "glassImage" src={item.img} alt=" "/>
+                        </div>
 
+                        <div className="details-wrapper"> 
+                            <div className='name'>{item.name}</div>
+                            <div className = 'glass-brand'>{item.brand}</div>
+                            <div className='price'>${item.price}</div>
+                        </div>
                     </div>
                     
                     </Link>

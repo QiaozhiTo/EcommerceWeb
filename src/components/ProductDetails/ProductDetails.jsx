@@ -6,6 +6,7 @@ import { useParams,useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../Redux/Action/action";
+import { useState } from "react";
 export default function ProductDetails() {
     // let data = allDatas()
     let params = useParams()
@@ -19,24 +20,68 @@ export default function ProductDetails() {
     // console.log(dispatch);
     let navigate = useNavigate()
     let dispatch = useDispatch()
-
+    // add state for color and size selection 01/03/2025
+    const [selectedColor, setSelectedColor] = useState("");
+    const [selectedSize, setSelectedSize] = useState("");
+    
 
     let click = ()=>{
         navigate('/glasses')
     }
-    let handleAddToCart = (parameter) =>{
-        dispatch(addToCart(parameter))
+    
+    // let handleAddToCart = (parameter) =>{
+    //     dispatch(addToCart(parameter))
 
-    }
+    // }
+    
+    // 01/03/2025 update handleAddToCart and dispatch product with selected size and color
+    // let handleAddToCart = () =>{
+    //     dispatch(
+    //         addToCart({
+    //             id: filterProduct.id,
+    //             parameter: filterProduct.parameter,
+    //             name: filterProduct.name,
+    //             brand: filterProduct.brand,
+    //             desc:filterProduct.desc,
+    //             price: filterProduct.price,
+    //             img: filterProduct.img,
+    //             size: selectedSize || filterProduct.size[0],
+    //             color: selectedColor || filterProduct.color[0],
+    //             category:filterProduct.category,
+    //             quantity: 1,
+
+
+    //         })
+    //     );
+    // }
+    let handleAddToCart = () => {
+        dispatch(
+            addToCart({
+                id: filterProduct.id,
+                parameter: filterProduct.parameter,
+                name: filterProduct.name,
+                brand: filterProduct.brand,
+                desc: filterProduct.desc,
+                price: filterProduct.price,
+                img: filterProduct.img,
+                size: selectedSize || filterProduct.size[0], // Default to first size if none selected
+                color: selectedColor || filterProduct.color[0], // Default to first color if none selected
+                category: filterProduct.category,
+                quantity: 1, // Default quantity
+            })
+        );
+    };
+    
+
 
   return (
     <div>
         <div className="mainContent">
             <div className="productView"> 
-                <div class='topBar'>
+                <div className='topBar'>
                     <div className="icon">
                         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back_ios" />
-                        <span class="material-symbols-outlined">arrow_back_ios</span>
+                        <span className="material-symbols-outlined">arrow_back_ios</span>
                     </div>
                     <div className="back" onClick={click}>Back To Shop </div>
                 </div>
@@ -60,14 +105,25 @@ export default function ProductDetails() {
                         </div>
                         <h1>{filterProduct.name}</h1>
                         <div className="desc">{filterProduct.desc}</div>
+                        {console.log(11111)}
+                        {console.log(filterProduct)}
                         
                         <div className="optionTruck">
                             <div className="lensOption">Lens Width and Frame Size</div>
-                            <select className="widthOpt">
+                            <select className="widthOpt" 
+                                    value = {selectedSize}
+                                    onChange={(e)=> setSelectedSize(e.target.value)}>
+
                                 <option value ="">-- Select Size --</option>
-                                <option value="">{filterProduct.size[0]} mm</option>
+                                
+                                {filterProduct.size.map((size) => (
+                                <option key={size} value={size}>{size}mm</option>
+                                ))}
+                        {console.log(11118881)}
+
+                                {/* <option value="">{filterProduct.size[0]} mm</option>
                                 <option value="">{filterProduct.size[1]} mm</option>
-                                <option value="">{filterProduct.size[2]} mm</option>
+                                <option value="">{filterProduct.size[2]} mm</option> */}
 
                             </select>
                         </div>
@@ -83,24 +139,31 @@ export default function ProductDetails() {
                                     )
                                 })}
                              */}
-                            <ur className='colorList'>
-                                <li style={{backgroundColor:filterProduct.color[0]}}></li>
-                                <li style={{backgroundColor:filterProduct.color[1]}}></li>
-                                <li style={{backgroundColor:filterProduct.color[2]}}></li>
-                                <li style={{backgroundColor:filterProduct.color[3]}}></li>
-                                <li style={{backgroundColor:filterProduct.color[4]}}></li>
-                                <li style={{backgroundColor:filterProduct.color[5]}}></li>
-                                <li style={{backgroundColor:filterProduct.color[6]}}></li>
+                            <ul className='colorList'>
+                            
+                                    {filterProduct.color.map((color) => (
+                                        <li 
+                                            key = {color}
+                                            className= {selectedColor === color ? "colorItem selected" : "colorItem"}
+                                            style={{backgroundColor:color}} 
+                                            onClick ={() => {setSelectedColor(color)}}>
+                                            {selectedColor === color && <span className="checkMark">✔</span>}
+                                        </li>
+                                        
 
-                            </ur>
+                                    ))}
+
+                            </ul>
 
                         </div>
                         <h1 className="price">${filterProduct.price}.00</h1>
                         
                         <div className="modelAction">
-                            <button className="button-model" onClick={()=>{
+                            {/* <button className="button-model" onClick={()=>{
                                 handleAddToCart(filterProduct.parameter)
-                            }}>Add to Basket</button>
+                            }}>Add to Basket</button> */}
+                                <button className="button-model" 
+                                onClick={handleAddToCart}>Add to Basket</button>
 
                         </div>
                         
@@ -109,16 +172,9 @@ export default function ProductDetails() {
 
 
             </div>
-        {/* <img src={filterProduct.img} alt=''></img> */}
-        {/* <div>{filterProduct.brand}</div> */}
-        {/* <div>{filterProduct.price}</div> */}
+
 
         </div>
-
-
-
-
-        
     </div>
   )
 }

@@ -22,6 +22,8 @@ export default function NavigationBar() {
         {/* <Cart></Cart> */}
         <Link className="naviName" to = '/featured'>Featured</Link>
         <Link className='naviName' to = '/cart'>Cart</Link>
+        <Link className='naviName' to = '/cartnew'>CartNew</Link>
+
         {/* <Link className='naviName' to = '/shopcart'>Cart</Link> */}
 
 

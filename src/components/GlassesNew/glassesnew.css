@@ -1,3 +1,6 @@
+*{
+    text-decoration: none;
+}
 .contents{
     width: 1240px;
     height: 714px;
@@ -24,33 +27,81 @@
     /* background-color: aquamarine; */
     /* border: 1px solid lightgray; */
 }
+.productItem{ 
+    width: 159.141px;
+    height: 228px;
+    border: 1px solid rgba(225,225,225);
+}
+/* cener glassImage in img-wrapper */
+.img-wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6F6F6;
+}
+/* option2 */
+/* .img-wrapper{
+    width: 127.141px;
+    height: 100px; 
+    padding-left: 16px;
+    padding-right: 16px; 
+    background-color: #F6F6F6;
+
+} */
 .glassImage{
-    width: 132.852px;
+    width: 127.141px;
     height: 100px;
     /* border: 1px solid black; */
     /* background-color: pink; */
-    background-color: #F6F6F6;
+    object-fit: contain;
+}
+.details-wrapper{
+    width: 127.141px;
+    height: 104.945px;
+    padding: 16px 16px 16px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .name{
     width: 120px;
     height: 20px;
-    margin-left: 6.430px;
-    margin-right: 6.43px;
+    margin-left: 3.570px;
+    margin-right: 3.570px;
     text-align: center;
-    /* background-color: palegoldenrod; */
+    color: rgba(26,26,26);
+    font-family: Tajawal, Helvetica, Arial, sans-serif;
+    font-size: 13.28px;
+    font-weight: 700;
+    line-height: 15.27px;
 }
 .glass-brand{
-    width: 132.852px;
+    width: 127.141px;
     height: 24px;
     margin-bottom: 12px;
+    line-height: 24px;
     text-align: center !important;
+    color: rgb(182, 182, 182);
+    font-style: italic;
+    font-family: Tajawal, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+
 
 }
 .price{
-    width: 132.852px;
+    width: 127.141px;
     margin-top: 21.28px;
     margin-bottom: 21.28px;
     height: 18.398px;
     text-align: center;
+    color: rgba(0,0,0);
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Tajawal, Helvetica, Arial, sans-serif;
+
+
 
 }

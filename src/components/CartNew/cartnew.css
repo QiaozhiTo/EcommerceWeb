@@ -1,7 +1,7 @@
 /* General Styling */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
   }
   
   .cart-button {
@@ -89,6 +89,7 @@ body {
   .basket-item{
     width: 566px;
     height: 90px;
+    margin-bottom: 12px;
     border: 1px solid rgb(225, 225, 225);
     display: flex;
     justify-content: space-around;
@@ -118,47 +119,51 @@ body {
     height: 90px;
     padding: 0px 12px 0px 12px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
 .basket-item-img{
     width: 90px;
     height: 90px;
+    margin-right: 16px;
+    object-fit: contain;
 }
 
 .basket-item-details{
     width: 292px;
     height: 76.469px;
-    background-color: lightblue;
+    /* background-color: lightblue; */
     line-height: 90px;
-    margin: auto;
+    margin: 0;
 }
 
 .basket-item-specs{
     /* width: 292px; */
     /* height: 34.07px; */
-    background-color: lightpink;
+    /* background-color: lightpink; */
     margin-top: 0px;
+    text-decoration: none;
 }
 .basket-item-specs h4{
     width: 142px;
-    height: 18.4px;
+    height: 18.393px;
     margin-top: 12px;
     margin-bottom: 12px;
     font-size: 15px;
     color: rgb(26,26,26);
     text-align: left;
-    line-height: 34px;
+    line-height: 18.4px;
     font-family: Tajawal, Helvetica, Arial, sans-serif;
     cursor: pointer;
     font-weight: 700;
-    background-color: lavender;
+    text-decoration: none;
+    /* background-color: lavender; */
 }
 
 .basket-item-specs-2{
     width: 292px;
     height: 34.07px;
-    background-color: green;
     margin-top: 0px;
     display: flex;
     justify-content: space-around;
@@ -170,23 +175,122 @@ body {
     width: 97.328px;
     height: 34.07px;
     font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
+.spec-title{
+    width: 97.328px;
+    height: 13.797px;
+    position: relative;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color:rgb(141, 141, 141);
+    font-family: Tajawal, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    line-height: 13.797px;
+    text-align: left;
+}
+.detail-quantity .my-0{
+    width: 97.328px;
+    height: 15.27px;
+    font-size: 13.28px;
+    line-height: 15.27px;
+    margin: 0;
+    text-align: left;
+    font-family: Tajawal, Helvetica, Arial, sans-serif;
+    color: rgb(26,26,26);
+    font-weight: 700;
+
+
+}
+
+.detail-size{
+    width: 97.328px;
+    height: 34.07px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.my-1{
+    width: 97.328px;
+    height: 15.27px;
+    font-size: 13.28px;
+    line-height: 15.27px;
+    margin: 0;
+    text-align: left;
+    font-family: Tajawal, Helvetica, Arial, sans-serif;
+    color: rgb(26,26,26);
+    font-weight: 700;
+
+
+
+}
+.detail-color{
+    width: 97.328px;
+    height: 34.07px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.detail-color .my-2{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    line-height: 15px;
+    margin: 0;
+    text-align: left;
+
+
+}
+
 
 
 .basket-item-price{
-    font-family: Tajawal, Helvetica, Arial, sans-serif;
+    /* width: 60px;
+    height: 18.398px; */
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.my-3{
     width: 60px;
     height: 18.398px;
-    line-height: 90px;
-    text-align: center;
-    font-size: 16px;
     color: #1a1a1a;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    line-height: 18.398px;
+    font-family: Tajawal, Helvetica, Arial, sans-serif;
+
+
+
+}
+.remover-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
+.basket-item-remover{
+    width: 6px ;
+    height: 15px;
+    padding: 16px 16px 16px 16px ;
+    border: 1px solid rgb(225, 225, 225);
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background: none;
 
-
- 
+ }
   
   /* .close-button {
     background: none;

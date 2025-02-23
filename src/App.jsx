@@ -6,7 +6,6 @@ import GlassesNew from './components/GlassesNew/GlassesNew';
 import { Outlet } from 'react-router-dom';
 import NavigationBar from './components/NavigationBar/NavigationBar';
 import Home from './components/Home/Home';
-// import Cart from './components/Cart/Cart';
 import {Provider} from 'react-redux'
 import store from './Redux/Store/store'
 import Cart from './components/Cart/Cart';
@@ -16,9 +15,9 @@ function App() {
     <Provider store={store}>
     <div className="App">
 
-      
       <NavigationBar></NavigationBar>
       <Outlet></Outlet>
+      {/* <ShoppingCart/> */}
       
 
       
