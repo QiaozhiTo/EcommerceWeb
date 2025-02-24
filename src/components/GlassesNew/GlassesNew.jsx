@@ -26,7 +26,7 @@ export default function GlassesNew() {
                         <div className="details-wrapper"> 
                             <div className='name'>{item.name}</div>
                             <div className = 'glass-brand'>{item.brand}</div>
-                            <div className='price'>${item.price}</div>
+                            <div className='price'>${item.price.toFixed(2)}</div>
                         </div>
                     </div>
                     

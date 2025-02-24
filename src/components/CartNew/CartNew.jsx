@@ -3,21 +3,21 @@ import { useSelector } from "react-redux";
 import "./cartnew.css";
 import { Link } from "react-router-dom";
 
-const CartNew = () => {
+const CartNew = ({isOpen, toggleCart}) => {
   let products = useSelector((state)=>state.cartItems)
 
-  const [isOpen, setIsOpen] = useState(false);
+//   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleCart = () => {
-    setIsOpen(!isOpen);
-  };
+//   const toggleCart = () => {
+//     setIsOpen(!isOpen);
+//   };
 
   return (
     <div>
       {/* Button to toggle the cart */}
-      <button className="cart-button" onClick={toggleCart}>
+      {/* <button className="cart-button" onClick={toggleCart}>
         🛒 Open Cart
-      </button>
+      </button> */}
 
       {/* Shopping Cart Drawer */}
       <div className={`shopping-cart ${isOpen ? "open" : ""}`}>

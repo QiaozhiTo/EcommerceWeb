@@ -6,7 +6,7 @@
     height: 714px;
     padding: 100px 100px 100px 100px;
     /* background-color: rgb(164, 195, 241); */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
 }
 .glass{
@@ -17,6 +17,8 @@
     /* flex-wrap: wrap; */
     grid-template-columns: repeat(7, 1fr);
     /* border: 1px solid lightgray; */
+    row-gap: 12px;
+    column-gap: 12px;
 
 
 }
@@ -55,6 +57,7 @@
     /* background-color: pink; */
     object-fit: contain;
 }
+
 .details-wrapper{
     width: 127.141px;
     height: 104.945px;
@@ -64,6 +67,7 @@
     align-items: center;
 
 }
+
 .name{
     width: 120px;
     height: 20px;
@@ -75,7 +79,9 @@
     font-size: 13.28px;
     font-weight: 700;
     line-height: 15.27px;
+    text-size-adjust: 100%;
 }
+
 .glass-brand{
     width: 127.141px;
     height: 24px;
@@ -87,9 +93,7 @@
     font-family: Tajawal, Helvetica, Arial, sans-serif;
     font-size: 12px;
     font-weight: 700;
-
-
-
+    text-size-adjust: 100%;
 }
 .price{
     width: 127.141px;
@@ -101,7 +105,6 @@
     font-size: 16px;
     font-weight: 700;
     font-family: Tajawal, Helvetica, Arial, sans-serif;
-
-
+    text-size-adjust: 100%;
 
 }

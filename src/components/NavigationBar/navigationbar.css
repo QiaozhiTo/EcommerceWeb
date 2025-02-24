@@ -1,42 +1,158 @@
+*{
+    margin: 0;
+    padding:0;
+
+}
+button{
+    border: none;
+}
 .logo{
     width: 150px;
     height: 100px;
+    /* position: absolute; */
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.logo .img{
+    width: 150px;
+    height: 100px;
 
+}
 .NaviBar{
-    width: 134px;
+    width: 1300px;
     height: 65px;
     padding:30px 50px 5px 50px;
     /* position: relative; */
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    background-attachment: scroll;
+    
 
 }
 .mainMenu{
-    width: 499px;
+    width: 545.320px;
     height: 18.398px;
-    margin: 16px 0 16px 20px;
+    margin: 16px 20px 16px 0px;
+    color: rgba(16,16,16);
+    cursor: pointer;
     display: flex;
-    justify-content: space-between;
-
-}
-
-.mainMenu ul{
+    justify-content: left;
+    font-size: 14px;
     list-style: none;
-    display: flex;
-    /* justify-content: space-between; */
+    align-items: center;
+
+
+
 }
+
+
 .naviName{
     padding: 10px 15px 10px 15px;
     height: auto;
     width: auto;
-    font-size: 14px;
+    font-size: 14px !important;
+    line-height: 18.398px;
+    opacity: 0.5;
+
 
 }
 
 
-.cart{
-    width: 20px;
-    height: 20px;
-    background-color: aqua;
+
+.searchBar{
+    width: 300px;
+    height: 39.797px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
+
+.search{
+    width: 16px;
+    height: 39.797px;
+    left:16px;
+    right:268px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+}
+
+.search-input-1{
+    width: 234px ;
+    height: 13.797px;
+    padding: 12px 16px 12px 48px;
+    font-family: Tajawal, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    border: 1px solid rgba(225, 225, 225);
+
+}
+
+.navigation-menu {
+    width: 264.68px;
+    height: 44px;
+    background-color: pink;
+    display: flex;
+    justify-content: left;
+    list-style: none;
+}
+
+.navigation-menu-item{
+    width: 56px;
+    height: 44px;
+    background-color: lavender;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.button-menu-link2 {
+    
+    width: 24px;
+    height: 24px;
+    padding: 10px 16px 10px 16px;
+
+    box-sizing: content-box !important;
+
+}
+.badge{
+    width: 24px;
+    height: 24px;
+
+}
+.anticon-shopping {
+    font-size: 1.5rem !important; /* 24px */
+}
+
+
+/* Position cart drawer */
+/* .shopping-cart {
+    position: fixed;
+    top: 0;
+    right: -300px; 
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .shopping-cart.open {
+    right: 0; 
+  }
+  
+  .cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  } */
