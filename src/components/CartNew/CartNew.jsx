@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const CartNew = ({isOpen, toggleCart}) => {
   let products = useSelector((state)=>state.cartItems)
-
+// moved below to NavigationBar.jsx
 //   const [isOpen, setIsOpen] = useState(false);
 
 //   const toggleCart = () => {

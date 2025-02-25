@@ -22,15 +22,27 @@
 }
 
 .text1{
-    width: 416px;
+    width: 400px;
     height: 110px;
     margin-top: 32px;
     margin-bottom: 10px;
-    font-size: 15px;
+    font-size: 48px;
     text-align: left;
+    font-family: Tajawal, Helvetica, Arial, sans-serif;
+    line-height: 55px;
+
 }
 .text2{
+    width: 500px;
+    height: 76px;
+    margin-top: 16px;
+    margin-bottom: 16px;
     text-align: left;
+    font-size: 16px;
+    font-family: Tajawal, Helvetica, Arial, sans-serif;
+
+    line-height: 24px;
+
 }
 
 .topRight img{
@@ -44,4 +56,100 @@
     color: white;
     padding: 16px 16px 16px 16px;
     border:1px solid black;
+    position: relative;
+}
+
+.home-arrow{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    
+}
+
+/*  middle */ 
+.display-middle{
+    width: 1100px;
+    height: 699.672px;
+    margin: 100px 50px 50px 50px;
+
+    /* background-color: lavender; */
+}
+
+.feature-product-banner{
+    width: 1100px;
+    height: 79.672px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.feature-product{
+    width: 246.562px;
+    height: 36.797px;
+    margin-top: 21.44px;
+    margin-bottom: 21.44px;
+    line-height: 36px;
+    font-size: 28px;
+    font-weight: 550;
+    font-family: Tajawal, Helvetica, Arial, sans-serif;
+
+}
+.see-all{
+    width: 49.375px;
+    height: 20.695px;
+    font-family: Tajawal, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 20.695px;
+    color: black;
+    text-decoration: underline;
+}
+
+.feature-item-display{
+    /* width: 315.336px;
+    height: 298px !important; */
+    width: 1100px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 353.328px 353.336px 353.336px;
+
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.feature-item {
+    width: 351.328px;
+    height: 298px !important;
+    border: 1px solid rgba(225,225,225);
+
+}
+.glass-img{
+    width: 351.328px;
+    height: 200px;
+    background-color: #F6F6F6;
+    object-fit: contain;
+}
+.content{
+    width: 351.328px;
+    height: 67.594px;
+    padding: 20px 20px 20px 20px;
+    text-decoration: none;
+}
+.glass-brand2{
+    height: 27.597px;
+    width: 351.328px;
+
+    text-align: left;
+    display: block;
+    color: black;
+    text-decoration: none !important;
+    display: block;
+
+}
+.glass-desc{
+    width: 311.328px;
+    height: 24px;
+    text-align: left;
+    margin-bottom: 16px;
+    color: rgb(129, 129, 129);
+    text-decoration: none;
+
+
 }

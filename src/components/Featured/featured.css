@@ -56,14 +56,18 @@
 .eachGlass{
     width: 315.336px;
     height: 298px;
-    /* border: 1px solid rgb(225, 225, 225); */
     display: grid;
-    /* grid-template-columns: repeat(3,1fr); */
     grid-template-columns: 353.328px 353.336px 353.336px;
     column-gap: 20px;
+    row-gap: 20px;
 
 }
+.feature-item {
+    width: 351.328px;
+    height: 298px !important;
+    border: 1px solid rgba(225,225,225);
 
+}
 .glass-img{
     width: 351.328px;
     height: 200px;
@@ -71,14 +75,15 @@
     object-fit: contain;
 }
 .content{
-    width: 311.328px;
+    width: 351.328px;
     height: 78.398px;
     padding: 20px 20px 20px 20px;
     text-decoration: none;
 }
 .glass-brand2{
-    height: 38.398px;
-    width: 311.386px;
+    height: 27.594px;
+    width: 351.328px;
+
     text-align: left;
     display: block;
     color: black;

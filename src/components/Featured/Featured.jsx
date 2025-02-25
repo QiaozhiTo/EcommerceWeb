@@ -37,7 +37,7 @@ export default function Featured() {
                     return(
                         // if(item.category=='featured'){}
                         <Link to ={`/product/${item.parameter}`}>
-                            <div className= {item.brand} key = {index}>
+                            <div className= {`feature-item ${item.brand}`} key = {index}>
                                 <img className='glass-img' src = {item.img}></img>
                                 <div className="content">
                                     <h2 className='glass-brand2'>{item.brand}</h2>

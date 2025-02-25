@@ -119,8 +119,8 @@ body {
     height: 90px;
     padding: 0px 12px 0px 12px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* vertically centering/
 }
 
 .basket-item-img{
@@ -272,12 +272,7 @@ body {
 
 
 }
-.remover-box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-}
 
 .basket-item-remover{
     width: 6px ;
