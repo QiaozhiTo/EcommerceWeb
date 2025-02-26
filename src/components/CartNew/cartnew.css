@@ -120,7 +120,7 @@ body {
     padding: 0px 12px 0px 12px;
     display: flex;
     justify-content: center; /* Horizontal centering */
-    align-items: center; /* vertically centering/
+    align-items: center; /*vertically centering */
 }
 
 .basket-item-img{

@@ -3,7 +3,7 @@
     padding: 0;
     text-decoration: none;
 }
-.featureContainer{
+.recommended-container{
     width: 1200px;
     height: 1510px;
     padding: 100px 100px 100px 100px;
@@ -26,7 +26,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
 }
 .topL h1{
     width: 400px;
@@ -65,7 +64,7 @@
     row-gap: 20px;
 
 }
-.feature-item {
+.recommended-item {
     width: 351.328px;
     height: 298px !important;
     border: 1px solid rgba(225,225,225);
@@ -104,15 +103,3 @@
 
 
 }
-/* .eachGlass h2{
-    height: 38.398px;
-    width: 311.386px;
-    text-align: left;
-}
-.eachGlass p{
-    width: 311.328px;
-    height: 24px;
-    text-align: left;
-    margin-bottom: 16px;
-
-} */

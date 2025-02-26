@@ -46,6 +46,8 @@ export default function NavigationBar() {
         onClick = {() => handleLinkClick('/glasses')}>Shop</Link>
         <li/><Link className={`naviName ${activeLink === '/featured' ? "active" : ""}`} to = '/featured'
         onClick = {() => handleLinkClick('/featured')}>Featured</Link>
+         <li/><Link className={`naviName ${activeLink === '/recommended' ? "active" : ""}`} to = '/recommended'
+        onClick = {() => handleLinkClick('/recommended')}>Recommended</Link>
         {/* <li/><Link className={`naviName ${activeLink === '/cartnew' ? "active" : ""}`}to = '/cartnew'
         onClick = {() => handleLinkClick('/cartnew')}>CartNew</Link> */}
         
