@@ -20,16 +20,40 @@ button{
     height: 100px;
 
 }
+
 .NaviBar{
     width: 1300px;
     height: 65px;
     padding:30px 50px 5px 50px;
-    /* position: relative; */
     display: flex;
     align-items: center;
     background-attachment: scroll;
-    
+    position:fixed; /*02/25/25*/
+    z-index: 1000;
 
+}
+
+.visible{
+    width: 1300px;
+    height: 65px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    background-attachment: scroll;
+    z-index: 1000;
+    /* changed when isScrolled */
+    padding:5px 50px 5px 50px;
+    bottom: 368px;
+    background-color: rgb(255, 255, 255);
+    transition: top 0.3s ease;
+    animation-name: slide-down;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+
+}
+
+body{
+    margin-top:65px;
 }
 .mainMenu{
     width: 545.320px;

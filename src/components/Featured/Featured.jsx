@@ -12,7 +12,7 @@ export default function Featured() {
     // })
     // console.log(array);
     function reduceddata() {
-        return data.filter(item=>item.category=='featured')
+        return data.filter(item=>item.category=='featured').slice(0,8);
     }
     console.log(reduceddata());
 

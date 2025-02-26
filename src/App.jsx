@@ -14,14 +14,12 @@ function App() {
   return (
     <Provider store={store}>
     <div className="App">
-
-      <NavigationBar></NavigationBar>
-      <Outlet></Outlet>
-      {/* <ShoppingCart/> */}
-      
-
+    <NavigationBar></NavigationBar>
+    <Outlet></Outlet>
+    
       
     </div>
+
     </Provider>
   );
 }

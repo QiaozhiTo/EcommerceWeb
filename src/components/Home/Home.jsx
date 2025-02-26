@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import { useSelector } from 'react-redux'
 // import allDatas from '../../datas/data_origin'
 import allDatas, { getData } from '../../datas/data_origin'
-
+// import NavigationBar from '../NavigationBar/NavigationBar'
 export default function Home() {
     let data = allDatas();
     let products = useSelector((state)=>state.products);
@@ -16,6 +16,7 @@ export default function Home() {
     // console.log(products);
   return (
     <div>
+
         <div className="contents">
             <div className="top">
                 <div className="topLeft">

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import './navigationbar.css';
 import {Link} from 'react-router-dom'
 import CartNew from "../CartNew/CartNew";
@@ -8,6 +8,8 @@ export default function NavigationBar() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("/");
+  const [isScrolled, setIsScrolled] = useState(false);
+
   const ToggleCart = () =>{
     setIsOpen(!isOpen);
   };
@@ -15,9 +17,22 @@ export default function NavigationBar() {
   const handleLinkClick = (path) =>{
     setActiveLink(path);
   };
+// added sticky on scroll -02/25/25
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 100); //show after 100px; navibar height: 100px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+
+  })
+
+  
 
   return (
-    <div className= 'NaviBar'>
+    <nav className= {`NaviBar ${isScrolled ? "visible" : ""}`}>
       <div className= "logo">
         <a href = '/'>
           <img alt='logo' src='https://salinaka-ecommerce.web.app/images/logo-full.059e10fa5fedbfb65165e7565ed3936f.png'></img>
@@ -70,7 +85,7 @@ export default function NavigationBar() {
       <CartNew isOpen={isOpen} toggleCart={ToggleCart} />
 
 
-    </div>
+    </nav>
   )
 }
 
