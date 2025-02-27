@@ -11,6 +11,11 @@ const CartNew = ({isOpen, toggleCart}) => {
 //   const toggleCart = () => {
 //     setIsOpen(!isOpen);
 //   };
+    const calculateTotal = () => {
+        return products.reduce((total, item) => {
+            return total + (item.price * item.quantity);
+        }, 0).toFixed(2);
+    };
 
   return (
     <div>
@@ -91,11 +96,20 @@ const CartNew = ({isOpen, toggleCart}) => {
 
             })}
              
-          
-            <div className="cart-footer">
-            <button className="checkout-button">Checkout</button>
+            <div className="display-area">
+                <div className="text-middle">Your basket is empty</div>
             </div>
 
+
+        </div>
+
+        <div className="cart-footer">
+            <div className="basket-total">
+                <p className="basket-total-title">Subtotal Amount:</p>
+                <h2 className="basket-total-amount">${calculateTotal()}</h2>
+            </div>
+
+            <button className="checkout-button">Check Out</button>
         </div>
         
       </div>

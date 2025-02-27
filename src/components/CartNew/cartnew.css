@@ -34,7 +34,7 @@ body {
   }
   .cart-list{
     width: 568px;
-    height: 309px;
+    height: 312px;
     padding: 16px 16px 100px 16px;
 
   }
@@ -295,23 +295,85 @@ body {
   }
    */
   
-  
+  .display-area{
+    width: 568px;
+    height: 310.04px;
+    background-color: lavender;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-middle{
+    width: 115.344px;
+    height: 15.273px;
+    margin-top: 22.178px;
+    margin-bottom:22.718px;
+    font-size: 9px;
+
+  }
   /* Cart Footer */
   .cart-footer {
-    padding: 15px;
-    border-top: 1px solid #ddd;
+    width: 568px;
+    height: 75.594px;
+    top: 552.406px !important;
+    padding: 16px 16px 16px 16px ;
     background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .basket-total{
+    width: 81.664px;
+    height: 75.594px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  .basket-total-title{
+      width: 81.664px;
+      height: 24px;
+      line-height: 24px;
+      font-size: 10px;
+      font-weight: 500;
+      color:rgb(74,74,74);
+      font-family: Arial, Helvetica, sans-serif;
+      display: block;
+      text-size-adjust: 100%;
+
+  }
+
+  .basket-total-amount{
+    width: 81.664px;
+    height: 27.594px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(26,26,26);
   }
   
   .checkout-button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
+    width: 72.695px !important;
+    height: 17.25px;
+    padding: 16px 32px 16px 32px;
+    font-size: 12px;
     cursor: pointer;
     border: none;
-    background-color: #28a745;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(37, 35, 35);
     color: white;
-    border-radius: 5px;
+    text-align: center;
+    line-height: 17.25px;
+    box-sizing: content-box;
+    text-transform: uppercase;
+    font-weight: 600;
+    
+
   }
   
   /* Overlay */
