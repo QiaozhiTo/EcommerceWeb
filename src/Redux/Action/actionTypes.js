@@ -1,1 +1,5 @@
 export let addToCarts = 'addToCarts'
+export let Clear_Cart = 'Clear_Cart'
+export let Increase_Cart = 'Increase_Cart'
+export let Decrease_Cart = 'Decrease_Cart'
+export let Remove_Item = 'Remove_Item'

@@ -27,7 +27,7 @@ export default function NavigationBar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
 
-  })
+  });
 
   
 

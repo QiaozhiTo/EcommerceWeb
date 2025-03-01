@@ -96,8 +96,8 @@
 
 }
 .button-model{
-    width: 103px !important;
-    height: 39.8px !important;
+    width: 104px !important;
+    height: 13.797px !important;
     padding-top: 12px;
     padding-left: 16px;
     padding-right: 16px;
@@ -105,8 +105,16 @@
     border: 1px solid black;
     background-color: black;
     color: white;
-    font-family: Tajawal, Helvetica, Arial, sans-serif;
-    font-size: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    box-sizing: content-box;
+}
+.remove-button{
+    background-color: rgb(252, 247, 247);
+    color: rgb(74,74,74);
+    border: 1px solid, rgb(225,225,225);
+    font-size: 11px;
+
 }
 .optionTruck{
     width: 439px;

@@ -30,12 +30,13 @@ body {
     transition: right 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     z-index: 1001;
   }
   .cart-list{
     width: 568px;
-    height: 312px;
-    padding: 16px 16px 100px 16px;
+    height: 100%;
+    padding: 16px 16px 0px 16px;
 
   }
   .shopping-cart.open {
@@ -54,10 +55,10 @@ body {
   .my-basket{
     width: 412.08px;
     height: 21.52px;
-    font-family: Tajawal, Helvetica, Arial, sans-serif;
+    font-family:  Helvetica, Arial, sans-serif;
+    color: rgb(26,26,26);
     font-size: 18px;
     text-align: left;
-
 
   }
   .close{
@@ -67,8 +68,10 @@ body {
     border: 1px;
     color: rgb(74, 74, 74);
     font-size: 12px;
+    font-weight: 700;
     border: 1px solid rgb(225, 225, 225);
-    font-family: Tajawal, Helvetica, Arial, sans-serif;
+    font-family:  Helvetica, Arial, sans-serif;
+    cursor:pointer;
 
   }
 
@@ -80,38 +83,56 @@ body {
     appearance: button;
     color: rgb(74, 74, 74);
     border: 1px solid rgb(225, 225, 225);
-    font-family: Tajawal, Helvetica, Arial, sans-serif;
-
-    font-size: 11px;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 13.78px;
+    font-size: 10px;
+    font-weight: 700;
+    opacity: 0.7;
+    cursor: pointer;
+    box-sizing: content-box; /*when in button, default box-sizing is block-box, padding are included in whole weight/height, need to make it content-box*/
   }
+
   /* Cart Items */
   
-  .basket-item{
+.basket-item{
     width: 566px;
     height: 90px;
     margin-bottom: 12px;
     border: 1px solid rgb(225, 225, 225);
     display: flex;
     justify-content: space-around;
-  }
+}
+.clearBasket{
+  opacity: 0;
+}
 .item-control{
     width: 30px;
     height: 90px;
 }
+
 .increase-button{
     width: 35px !important;
     height: 45px !important;
     padding: 5px 5px 5px 5px ;
     border: 1px solid rgb(225, 225, 225);
-    background: none;
+    background:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .decrease-button{
     background: none;
     width: 35px;
     height: 45px;
-    padding:5px;
+    padding: 5px;
     border: 1px solid rgb(225, 225, 225);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
     
 }
 .item-wrapper{
@@ -154,7 +175,7 @@ body {
     color: rgb(26,26,26);
     text-align: left;
     line-height: 18.4px;
-    font-family: Tajawal, Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     cursor: pointer;
     font-weight: 700;
     text-decoration: none;
@@ -168,7 +189,7 @@ body {
     display: flex;
     justify-content: space-around;
     font-size: 12px;
-    font-family: Tajawal, Helvetica, Arial, sans-serif;
+    font-family:  Helvetica, Arial, sans-serif;
 
 }
 .detail-quantity{
@@ -187,7 +208,7 @@ body {
     margin-bottom: 5px;
     font-size: 12px;
     color:rgb(141, 141, 141);
-    font-family: Tajawal, Helvetica, Arial, sans-serif;
+    font-family:  Helvetica, Arial, sans-serif;
     font-weight: 700;
     line-height: 13.797px;
     text-align: left;
@@ -245,10 +266,7 @@ body {
     line-height: 15px;
     margin: 0;
     text-align: left;
-
-
 }
-
 
 
 .basket-item-price{
@@ -259,6 +277,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .my-3{
     width: 60px;
     height: 18.398px;
@@ -268,8 +287,6 @@ body {
     display: block;
     line-height: 18.398px;
     font-family: Tajawal, Helvetica, Arial, sans-serif;
-
-
 
 }
 
@@ -287,23 +304,19 @@ body {
 
  }
   
-  /* .close-button {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-  }
-   */
-  
-  .display-area{
+
+.empty-area{
     width: 568px;
-    height: 310.04px;
-    background-color: lavender;
+    height: calc(100% - 21.52px);
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
+.not-empty {
+  opacity: 0;
+
+}
   .text-middle{
     width: 115.344px;
     height: 15.273px;
@@ -316,7 +329,7 @@ body {
   .cart-footer {
     width: 568px;
     height: 75.594px;
-    top: 552.406px !important;
+    /* top: 552.406px !important; */
     padding: 16px 16px 16px 16px ;
     background-color: #f8f9fa;
     display: flex;
@@ -325,7 +338,7 @@ body {
   }
 
   .basket-total{
-    width: 81.664px;
+    width: 83.664px;
     height: 75.594px;
     display: flex;
     justify-content: center;
@@ -334,12 +347,12 @@ body {
 
   }
 
-  .basket-total-title{
-      width: 81.664px;
+.basket-total-title{
+      width: 83.664px;
       height: 24px;
       line-height: 24px;
       font-size: 10px;
-      font-weight: 500;
+      font-weight: 550;
       color:rgb(74,74,74);
       font-family: Arial, Helvetica, sans-serif;
       display: block;
@@ -352,8 +365,8 @@ body {
     height: 27.594px;
     margin-top: 12px;
     margin-bottom: 12px;
-    font-size: 26px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(26,26,26);
   }
   

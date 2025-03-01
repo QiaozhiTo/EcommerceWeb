@@ -4,15 +4,18 @@ import { getData } from "../../datas/data_origin";
 import './ProductDetails.css';
 import { useParams,useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../../Redux/Action/action";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeItem } from "../../Redux/Action/action";
 import { useState } from "react";
+
 export default function ProductDetails() {
     // let data = allDatas()
     let params = useParams()
     console.log(params);
-    let filterProduct = getData(params.productId)
+    let filterProduct = getData(params.productId);
     console.log(filterProduct);
+    const cartItems = useSelector((state) => state.cartItems);
+
     // filterProduct.size.map((item,index)=>{
         // return()
     // })
@@ -28,7 +31,14 @@ export default function ProductDetails() {
     let click = ()=>{
         navigate('/glasses')
     }
-    
+    const isInCart = cartItems.some(
+        (item) =>
+            item.id === filterProduct.id &&
+            item.size === (selectedSize || filterProduct.size[0]) &&
+            item.color === (selectedColor || filterProduct.color[0])
+
+    );
+     
     // let handleAddToCart = (parameter) =>{
     //     dispatch(addToCart(parameter))
 
@@ -63,6 +73,7 @@ export default function ProductDetails() {
                 brand: filterProduct.brand,
                 desc: filterProduct.desc,
                 price: filterProduct.price,
+                unitPrice: filterProduct.unitPrice,
                 img: filterProduct.img,
                 size: selectedSize || filterProduct.size[0], // Default to first size if none selected
                 color: selectedColor || filterProduct.color[0], // Default to first color if none selected
@@ -71,8 +82,16 @@ export default function ProductDetails() {
             })
         );
     };
-    
+    const handleBasketToggle = () => {
+        if (isInCart) {
+            dispatch(removeItem(filterProduct.id));
+        } else {
+            handleAddToCart();
+        }
 
+    };
+        
+    
 
   return (
     <div>
@@ -156,14 +175,15 @@ export default function ProductDetails() {
                             </ul>
 
                         </div>
-                        <h1 className="price">${filterProduct.price}.00</h1>
+                        <h1 className="price">${filterProduct.price.toFixed(2)}</h1>
                         
                         <div className="modelAction">
-                            {/* <button className="button-model" onClick={()=>{
-                                handleAddToCart(filterProduct.parameter)
-                            }}>Add to Basket</button> */}
-                                <button className="button-model" 
-                                onClick={handleAddToCart}>Add to Basket</button>
+                            
+                                <button className={`button-model ${isInCart ? "remove-button":""}`} 
+                                onClick={handleBasketToggle}>
+                                    {isInCart? "Remove from Basket":"Add to Basket"}
+                                </button>
+                                
 
                         </div>
                         

@@ -8,11 +8,9 @@ import ProductDetails from './components/ProductDetails/ProductDetails';
 import Product from './components/Product/Product';
 import GlassesNew from './components/GlassesNew/GlassesNew';
 import Home from './components/Home/Home';
-import Cart from './components/Cart/Cart';
 import Featured from './components/Featured/Featured';
-import CartNew from './components/CartNew/CartNew';
+// import CartNew from './components/CartNew/CartNew';
 import Recommended from './components/Recommended/Recommended';
-// import Shoppingcart from './components/ShoppingCart/Shoppingcart';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
@@ -25,7 +23,7 @@ root.render(
           <Route path='glasses' element = {<GlassesNew></GlassesNew>}></Route>
           <Route path='featured' element = {<Featured></Featured>}></Route>
           <Route path = 'recommended' element = {<Recommended></Recommended>}/>
-          <Route path='cartnew' element ={<CartNew></CartNew>}/>
+          {/* <Route path='cartnew' element ={<CartNew></CartNew>}/> */}
 
           <Route path='product' element = {<Product></Product>}>
               <Route path = ':productId' element ={<ProductDetails></ProductDetails>}></Route>
