@@ -1,11 +1,21 @@
 import React, {useEffect, useState} from "react";
 import './navigationbar.css';
-import {Link} from 'react-router-dom'
+import {Link,useParams} from 'react-router-dom'
 import CartNew from "../CartNew/CartNew";
-
+import { useSelector } from "react-redux";
+import { getData } from "../../datas/data_origin";
 
 export default function NavigationBar() {
+  let params = useParams()
+  const cartItems = useSelector((state) => state.cartItems);
+  // Only fetch filterProduct if productId exists (optional, for debugging)
+  // let filterProduct = getData(params.productId);
+  let filterProduct = params.productId ? getData(params.productId) : null;
 
+  console.log("Cart Items:", cartItems);
+  console.log("Filtered Product:", filterProduct);
+
+  
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("/");
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,6 +26,7 @@ export default function NavigationBar() {
 
   const handleLinkClick = (path) =>{
     setActiveLink(path);
+    setIsOpen(false); // Close cart when navigating
   };
 // added sticky on scroll -02/25/25
   useEffect(() => {
@@ -28,6 +39,21 @@ export default function NavigationBar() {
     return () => window.removeEventListener("scroll", handleScroll);
 
   });
+
+  // const isInCart = filterProduct
+  // ? cartItems.some((item) => item.id === filterProduct.id)
+  // : false;
+
+  const hasItemsInCart = cartItems.length > 0;
+
+  // const isInCart = cartItems.some(
+  //   (item) =>
+  //       item.id === filterProduct.id);
+
+  const calculateDistinctBrands = () => {
+      const uniqueBrands = new Set(cartItems.map(item => item.id));
+      return uniqueBrands.size;
+  };
 
   
 
@@ -69,9 +95,13 @@ export default function NavigationBar() {
         <li className="navigation-menu-item">
           <button className="button-menu-link2" onClick ={ToggleCart}>
             <div className="badge">
-              <span role="img" className="anticon-shopping">
+              <span role="img" className="action-shopping">
                 <svg viewBox="64 64 896 896" focusable="false" data-icon="shopping" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M832 312H696v-16c0-101.6-82.4-184-184-184s-184 82.4-184 184v16H192c-17.7 0-32 14.3-32 32v536c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V344c0-17.7-14.3-32-32-32zm-432-16c0-61.9 50.1-112 112-112s112 50.1 112 112v16H400v-16zm392 544H232V384h96v88c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-88h224v88c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-88h96v456z"></path></svg>
-                </span>
+              </span>
+
+              <span className ={`badge-count ${hasItemsInCart ? "" : "not-display"}`}>
+              {hasItemsInCart ? calculateDistinctBrands() : ""}
+              </span>
             </div>
           </button>
         </li>
@@ -84,7 +114,8 @@ export default function NavigationBar() {
 
       </ul>
       {/* Embed CartNew here */}
-      <CartNew isOpen={isOpen} toggleCart={ToggleCart} />
+      {/* <CartNew isOpen={isOpen} toggleCart={ToggleCart} /> */}
+      {isOpen && <CartNew isOpen={isOpen} toggleCart={ToggleCart}/>}
 
 
     </nav>

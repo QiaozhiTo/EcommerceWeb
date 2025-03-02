@@ -155,9 +155,28 @@ body{
 .badge{
     width: 24px;
     height: 24px;
+    position: relative;
 
 }
-.anticon-shopping {
+
+.badge-count{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    right: -15px;
+    top: -12px;
+    left: 19px;
+    bottom: 16px;
+    color: rgb(255,255,255);
+    font-size: 11px;
+    text-align: center;
+}
+.not-display{
+    opacity: 0;
+}
+.action-shopping {
     font-size: 1.5rem !important; /* 24px */
 }
 

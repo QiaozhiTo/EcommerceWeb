@@ -33,11 +33,10 @@ export default function ProductDetails() {
     }
     const isInCart = cartItems.some(
         (item) =>
-            item.id === filterProduct.id &&
-            item.size === (selectedSize || filterProduct.size[0]) &&
-            item.color === (selectedColor || filterProduct.color[0])
-
-    );
+            item.id === filterProduct.id 
+        // && item.size === (selectedSize || filterProduct.size[0]) &&
+        //     item.color === (selectedColor || filterProduct.color[0])
+    ); // exclude size and color from isInCart to make add to cart not size/color sensitive;
      
     // let handleAddToCart = (parameter) =>{
     //     dispatch(addToCart(parameter))

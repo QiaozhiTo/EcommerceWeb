@@ -27,7 +27,7 @@ const CartNew = ({isOpen, toggleCart}) => {
     };
 
     const calculateDistinctBrands = () => {
-        const uniqueBrands = new Set(products.map(item => item.brand));
+        const uniqueBrands = new Set(products.map(item => item.id));
         return uniqueBrands.size;
     };
     // update notEmpty when products change;
