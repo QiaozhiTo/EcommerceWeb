@@ -34,11 +34,11 @@
     height: 493px;
     padding: 10px 10px 10px 10px;
 
-
 }
 .imgSide{
     width: 118px;
     height: 98px;
+    border: 1px solid rgb(225,225,225);
 
 
 }
@@ -87,6 +87,11 @@
     text-align: left;
     font-size: 12px;
 }
+.divider{
+    height: 1px;
+    width: 436px;
+    background-color: rgb(241,241,241);
+}
 .modelAction{
     width: 436px;
     height: 39.797px;
@@ -96,7 +101,7 @@
 
 }
 .button-model{
-    width: 104px !important;
+    width: 69.688px !important;
     height: 13.797px !important;
     padding-top: 12px;
     padding-left: 16px;
@@ -106,11 +111,13 @@
     background-color: black;
     color: white;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     box-sizing: content-box;
     cursor: pointer !important;
 }
 .remove-button{
+    width: 104.391px !important;
+    height: 13.797px;
     background-color: white;
     color: rgb(74,74,74);
     border: 1px solid, rgb(225,225,225);
@@ -118,12 +125,11 @@
 
 }
 .optionTruck{
-    width: 439px;
-    height: 90px;
+    width: 436px;
+    height: 74.979px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    margin-bottom: 38.59px;
 }
 .lensOption{
     text-align: left;
@@ -141,7 +147,7 @@
 }
 .colorArea{
     width: 436px;
-    height: 81.2px;
+    height: 66.97px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -184,8 +190,8 @@
 .price{
     width: 436px;
     height: 51.19px;
-    font-size: 32px;
-    font-family: Tajawal, Helvetica, Arial, sans-serif;
+    font-size: 32px !important;
+    font-family:  Helvetica, Arial, sans-serif;
     font-weight: 700;
     margin: 21.44px 0px 21.44px 0px;
 }

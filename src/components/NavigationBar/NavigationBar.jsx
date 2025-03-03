@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { getData } from "../../datas/data_origin";
 
 export default function NavigationBar() {
-  let params = useParams()
+  let params = useParams();
   const cartItems = useSelector((state) => state.cartItems);
   // Only fetch filterProduct if productId exists (optional, for debugging)
   // let filterProduct = getData(params.productId);

@@ -123,9 +123,9 @@ export default function ProductDetails() {
                         </div>
                         <h1>{filterProduct.name}</h1>
                         <div className="desc">{filterProduct.desc}</div>
-                        {console.log(11111)}
-                        {console.log(filterProduct)}
-                        
+                        <br/>
+                        <div className="divider"></div>
+                        <br/>
                         <div className="optionTruck">
                             <div className="lensOption">Lens Width and Frame Size</div>
                             <select className="widthOpt" 
@@ -137,7 +137,6 @@ export default function ProductDetails() {
                                 {filterProduct.size.map((size) => (
                                 <option key={size} value={size}>{size}mm</option>
                                 ))}
-                        {console.log(11118881)}
 
                                 {/* <option value="">{filterProduct.size[0]} mm</option>
                                 <option value="">{filterProduct.size[1]} mm</option>
@@ -145,6 +144,7 @@ export default function ProductDetails() {
 
                             </select>
                         </div>
+                        <br/>
                         <div className="colorArea">
                             <div className="colorOption">Choose Color</div>
                             
