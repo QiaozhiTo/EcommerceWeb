@@ -109,7 +109,7 @@ export default function NavigationBar() {
 
         <li className="navigation-action">
           <a className="sign-up">Sign Up</a>
-          <a className="sign-in">Sign In</a>
+          <a className="sign-in" href="signIn">Sign In</a>
         </li>
 
       </ul>

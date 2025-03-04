@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.sign-in-content{
+    width: 1240px;
+    height: 409.047px;
+    padding: 100px 100px 100px 100px;
+    background-color: lavender;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.content-area{
+    width: 800px;
+    height: 409.047px;
+    margin-left: 220px;
+    margin-right: 220px;
+    background-color: rgb(214, 221, 204);
+}
+
+.auth-undefined{
+    width: 734px;
+    height: 294.25px;
+    padding: 16px 32px 32px 32px;
+    border: 1px solid rgb(225,225,225);
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.auth-message{
+    width: 774px;
+    height: 39.797px;
+    padding: 12px 12px 12px 12px;
+    border: 1px solid rgb(225,225,225);
+    background-color: rgb(144, 241, 246);
+   
+
+}
+.auth-main{
+    width: 354.906px;
+    height: 294.25px;
+    background-color: beige;
+
+}
+
+.auth-divider{
+    width: 36.492px;
+    height: 294.25px;
+    margin-left: 48px;
+    margin-right: 48px;
+    /* background-color: rgb(212, 237, 237); */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.auth-divider h6 {
+    width: 12.492px;
+    height: 12.32px;
+    padding: 12px 12px 12px 12px;
+    margin-top: 24.978px;
+    margin-bottom: 24.978px;
+    color: rgb(249, 249, 249); /* Optional styling */
+    font-size: 10.72px;
+    z-index: 1px;
+}
+.auth-divider::before{
+    content: "";
+    background-color: rgb(225, 225, 225);
+
+    font-family : Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    height: 88.2734px;
+    line-height :18.4px;
+    position: absolute;
+    text-size-adjust: 100%;
+    top :73.5625px;
+    width: 1px;
+    bottom:132.414px;
+    left:17.742px;
+    right:17.75px;
+
+}
+.auth-divider::after{
+    content: "";
+    background-color: rgb(225, 225, 225);
+    font-family : Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    height: 88.2734px;
+    line-height :18.4px;
+    position: absolute;
+    text-size-adjust: 100%;
+    bottom :73.5625px;
+    width: 1px;
+    top:132.414px;
+    left:17.742px;
+    right:17.75px;
+
+}
+.auth-provider{
+    width: 246.602px;
+    height: 294.25px;
+    background-color: azure;
+
+}
+
+.auth-info{
+    width: 116.094px;
+    height: 13.797px;
+    margin-right: 32px;
+
+}
