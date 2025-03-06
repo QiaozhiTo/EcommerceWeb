@@ -12,6 +12,7 @@ import Featured from './components/Featured/Featured';
 // import CartNew from './components/CartNew/CartNew';
 import Recommended from './components/Recommended/Recommended';
 import SignIn from './components/SignIn/SignIn';
+import SignUp from './components/SignUp/SignUp';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
@@ -25,6 +26,7 @@ root.render(
           <Route path='featured' element = {<Featured></Featured>}></Route>
           <Route path = 'recommended' element = {<Recommended></Recommended>}/>
           <Route path='signIn' element ={<SignIn></SignIn>}/>
+          <Route path='signUp' element ={<SignUp></SignUp>}/>
 
           <Route path='product' element = {<Product></Product>}>
               <Route path = ':productId' element ={<ProductDetails></ProductDetails>}></Route>

@@ -2,11 +2,13 @@
     margin: 0;
     padding: 0;
 }
-.sign-in-content{
+
+.sign-up-content{
     width: 1240px;
     height: 409.047px;
     padding: 100px 100px 100px 100px;
     /* background-color: lavender; */
+
     display: flex;
     justify-content: center;
    
@@ -20,9 +22,9 @@
     /* background-color: rgb(214, 221, 204); */
 }
 
-.auth-undefined{
+.auth-undefined-sign-up{
     width: 734px;
-    height: 294.25px;
+    height: 348.898px;
     padding: 16px 32px 32px 32px;
     border: 1px solid rgb(225,225,225);
     /* background-color: pink; */
@@ -40,16 +42,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   
 
 }
-.auth-main{
+.auth-main-sign-up{
     width: 354.906px;
     height: 294.25px;
+    
     /* background-color: beige; */
 
 }
-.auth-main h3{
+.auth-main-sign-up h3{
     top:18.72px;
     bottom: 18.72px;
     width: 354.906px;
@@ -147,7 +149,8 @@
     margin-bottom: 24.978px;
     color: rgb(26, 26, 26); /* Optional styling */
     font-size: 10.72px;
-    z-index: 1px;
+    z-index: 1;
+    background-color: rgb(255,255,255);
 }
 .auth-divider::before{
     content: "";
@@ -261,7 +264,7 @@
 
 
 .auth-info{
-    width: 116.094px;
+    width: 126.711px;
     height: 13.797px;
     margin-right: 32px;
     color: rgb(74,74,74);
