@@ -16,6 +16,7 @@ export default function GlassesNew() {
                     
                     <Link to ={`/product/${item.parameter}`}>
                    {/* 02/22/2025 -- Add a static class to ensure all items share base styles */}
+                    <div className="product-card">
 
                     <div className={`productItem ${item.brand}`} key={index}>
 
@@ -28,6 +29,10 @@ export default function GlassesNew() {
                             <div className = 'glass-brand'>{item.brand}</div>
                             <div className='price-display-area'>${item.price.toFixed(2)}</div>
                         </div>
+                    </div>
+
+                    <button class="product-card-button" type="button">Add to basket</button>
+                    
                     </div>
                     
                     </Link>
